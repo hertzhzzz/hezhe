@@ -40,8 +40,38 @@
 
 ## 部署
 
-1. Vercel: 推送 GitHub 自动部署
-2. 域名: 解析到 Vercel
+### 线上地址
+
+- **网站**: https://hezhe.vercel.app
+- **GitHub**: https://github.com/hertzhzzz/hezhe
+
+### 部署流程
+
+1. 确保已登录 GitHub CLI (`gh auth login`)
+2. 初始化 Git（如未初始化）:
+   ```bash
+   git init
+   git add .
+   git commit -m "feat: initial commit"
+   ```
+3. 创建 GitHub 仓库并推送:
+   ```bash
+   gh repo create hezhe --public --source=. --description "HEZHE - Personal Blog" --push
+   ```
+4. 使用 Vercel CLI 部署:
+   ```bash
+   vercel --prod --yes
+   ```
+5. 后续更新只需推送代码到 GitHub，Vercel 会自动部署:
+   ```bash
+   git add .
+   git commit -m "feat: update"
+   git push
+   ```
+
+### 域名绑定
+
+如需绑定自定义域名，在 Vercel Dashboard 中 Settings → Domains 添加即可。
 
 ## 写作流程
 
