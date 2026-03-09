@@ -2,7 +2,7 @@ import { getCollection } from 'astro:content';
 
 export async function GET() {
   const posts = await getCollection('posts');
-  const site = 'https://hezhe.wang';
+  const site = 'https://markhzz.com';
 
   const staticPages = [
     { url: '/', priority: '1.0', changefreq: 'daily' },
