@@ -1,0 +1,187 @@
+---
+import { getCollection } from 'astro:content';
+import MainLayout from '../../layouts/MainLayout.astro';
+// import ViewCounter from '../../components/ViewCounter.astro';
+
+export async function getStaticPaths() {
+  const posts = await getCollection('posts');
+  return posts.map((post) => ({
+    params: { slug: post.slug },
+    props: { post },
+  }));
+}
+
+const { post } = Astro.props;
+const { Content } = await post.render();
+---
+
+<MainLayout title={`${post.data.title} / ${post.data.titleEn || ''}`}>
+  <article class="post-detail">
+    <header class="post-header">
+      <div class="post-meta">
+        <span class="post-category">
+          {post.data.categories[0] || 'Article'}
+        </span>
+        <span class="post-date">
+          {post.data.pubDate.toISOString().split('T')[0].replace(/-/g, '.')}
+        </span>
+        <span class="post-views">
+          {/* <ViewCounter slug={post.slug} /> */}
+        </span>
+      </div>
+      <h1 class="post-title">
+        {post.data.title}
+        {post.data.titleEn && <span class="post-title-en">{post.data.titleEn}</span>}
+      </h1>
+      {post.data.tags && (
+        <div class="post-tags">
+          {post.data.tags.map((tag) => (
+            <a href={`/tags/${tag}`} class="tag">{tag}</a>
+          ))}
+        </div>
+      )}
+    </header>
+
+    <div class="post-content">
+      <Content />
+    </div>
+
+    <footer class="post-footer">
+      <a href="/" class="back-link">← 返回首页 / Back to Home</a>
+    </footer>
+  </article>
+</MainLayout>
+
+<style>
+  .post-detail {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 48px 0;
+  }
+
+  .post-header {
+    margin-bottom: 48px;
+    padding-bottom: 32px;
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  .post-meta {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 20px;
+    font-family: var(--font-mono);
+    font-size: 12px;
+  }
+
+  .post-category {
+    color: var(--color-accent);
+  }
+
+  .post-date {
+    color: var(--color-text-muted);
+  }
+
+  .post-views {
+    margin-left: auto;
+  }
+
+  .post-title {
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 16px;
+  }
+
+  .post-title-en {
+    display: block;
+    font-size: 1.25rem;
+    font-weight: 400;
+    color: var(--color-text-secondary);
+    margin-top: 8px;
+  }
+
+  .post-tags {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+
+  .tag {
+    padding: 4px 12px;
+    background: var(--color-bg-secondary);
+    border: 1px solid var(--color-border);
+    border-radius: 4px;
+    font-family: var(--font-mono);
+    font-size: 11px;
+    color: var(--color-text-secondary);
+    text-decoration: none;
+    transition: all 0.2s;
+  }
+
+  .tag:hover {
+    border-color: var(--color-accent);
+    color: var(--color-text);
+  }
+
+  .post-content {
+    font-size: 16px;
+    line-height: 1.8;
+    color: var(--color-text-secondary);
+  }
+
+  .post-content h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--color-text);
+    margin: 48px 0 24px;
+  }
+
+  .post-content h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--color-text);
+    margin: 32px 0 16px;
+  }
+
+  .post-content p {
+    margin-bottom: 24px;
+  }
+
+  .post-content code {
+    font-family: var(--font-mono);
+    background: var(--color-bg-secondary);
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-size: 0.9em;
+  }
+
+  .post-content pre {
+    background: var(--color-bg-secondary);
+    padding: 20px;
+    border-radius: 8px;
+    overflow-x: auto;
+    margin-bottom: 24px;
+  }
+
+  .post-content pre code {
+    background: none;
+    padding: 0;
+  }
+
+  .post-footer {
+    margin-top: 64px;
+    padding-top: 32px;
+    border-top: 1px solid var(--color-border);
+  }
+
+  .back-link {
+    color: var(--color-text-secondary);
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.2s;
+  }
+
+  .back-link:hover {
+    color: var(--color-accent);
+  }
+</style>

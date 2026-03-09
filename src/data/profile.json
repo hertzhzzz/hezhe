@@ -1,0 +1,47 @@
+{
+  "site": {
+    "name": "HEZHE",
+    "nameCn": "和喆",
+    "url": "https://hezhe.dev",
+    "logo": "/logos/z-logo.png",
+    "description": "探索教育与AI的交汇处 - 让AI赋能教育，让教育拥抱未来",
+    "descriptionEn": "Exploring the intersection of education and AI - Empowering education with AI, embracing the future of learning"
+  },
+  "author": {
+    "name": "Mark",
+    "nameCn": "和喆",
+    "role": "Educator & AI Engineer",
+    "roleCn": "老师 & AI工程师",
+    "avatar": "/logos/z-logo.png",
+    "bio": [
+      "教育学硕士 + AI工程师，致力于探索AI如何变革教育。",
+      "专注于 AI 应用、Prompt Engineering。"
+    ],
+    "bioEn": [
+      "Master of Education + AI Engineer, dedicated to exploring how AI can transform education.",
+      "Focused on AI in education, prompt engineering, and human-AI collaboration."
+    ],
+    "skills": ["AI Education", "Prompt Engineering", "LLM", "Self-learning", "Python"]
+  },
+  "hero": {
+    "title": "教育界的探索者 - 和喆",
+    "titleEn": "Explorer in Education",
+    "subtitle": "探索 AI 与教育的融合，让每一个学习者都能受益于人工智能带来的变革",
+    "subtitleEn": "Exploring the fusion of AI and education, making AI-powered learning accessible to every learner",
+    "code": {
+      "line1": { "prefix": "const ", "property": "educator", "value": "\"Mark\"" },
+      "line2": { "prefix": "const ", "property": "focus", "value": "[\"AI\", \"Education\"]" },
+      "line3": { "prefix": "", "property": "", "value": "teach(AI)" },
+      "line4": { "prefix": "", "property": "", "value": "// AI for education", "isComment": true }
+    }
+  },
+  "social": {
+    "twitter": "https://x.com/MarkHzzzz",
+    "github": "https://github.com/hertzhzzz",
+    "linkedin": "https://linkedin.com/in/",
+    "email": "mailto:"
+  },
+  "footer": {
+    "links": []
+  }
+}

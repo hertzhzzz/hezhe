@@ -1,0 +1,77 @@
+---
+import MainLayout from '../layouts/MainLayout.astro';
+import profile from '../data/profile.json';
+
+const { author } = profile;
+---
+
+<MainLayout title="关于 / About">
+    <section class="section">
+        <h2 class="section-title">
+            关于我
+            <span class="cn">About Me</span>
+        </h2>
+
+        <div class="about">
+            <img src={author.avatar} alt="avatar" class="about-avatar" />
+            <div class="about-content">
+                <h3>
+                    {author.name}
+                    <span class="cn">{author.nameCn}</span>
+                </h3>
+                <div class="role">
+                    {author.role}
+                    <span class="cn">{author.roleCn}</span>
+                </div>
+                {author.bio.map((paragraph, index) => (
+                    <p>
+                        {paragraph}
+                        <span class="cn">{author.bioEn[index]}</span>
+                    </p>
+                ))}
+
+                <h4 class="skills-title">
+                    技术栈
+                    <span class="cn">Tech Stack</span>
+                </h4>
+                <div class="skills">
+                    {author.skills.map(skill => (
+                        <span class="skill">{skill}</span>
+                    ))}
+                </div>
+            </div>
+        </div>
+    </section>
+</MainLayout>
+
+<style>
+    .skills-title {
+        font-size: 14px;
+        font-weight: 600;
+        margin: 20px 0 12px;
+        color: var(--color-text);
+    }
+
+    .skills-title .cn {
+        font-size: 12px;
+        color: var(--color-text-muted);
+        font-weight: 400;
+        margin-left: 8px;
+    }
+
+    .skills {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+
+    .skill {
+        padding: 4px 12px;
+        background: var(--color-bg-secondary);
+        border: 1px solid var(--color-border);
+        border-radius: 4px;
+        font-family: var(--font-mono);
+        font-size: 12px;
+        color: var(--color-text-secondary);
+    }
+</style>
