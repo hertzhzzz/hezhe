@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "slow-life.md",
+                "file": "fast-life.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "slow-life"
+              "title": "fast-life"
             }
           }
         ]
@@ -94,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "slow-life.md",
+                "file": "fast-life.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +104,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for slow-life"
+              "title": "Backlinks for fast-life"
             }
           },
           {
@@ -113,12 +113,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "slow-life.md",
+                "file": "fast-life.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from slow-life"
+              "title": "Outgoing links from fast-life"
             }
           },
           {
@@ -156,13 +156,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "slow-life.md",
+                "file": "fast-life.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of slow-life"
+              "title": "Outline of fast-life"
             }
           },
           {
@@ -196,12 +196,13 @@
   },
   "active": "3e637764b2c36c9a",
   "lastOpenFiles": [
-    "templates/博客文章.md",
+    "slow-life.md",
+    "fast-life.md",
     "deep-learning-creativity.md",
+    "templates/博客文章.md",
     "templates",
     "Untitled.base",
     "digital-age.md",
-    "minimalism-design.md",
-    "slow-life.md"
+    "minimalism-design.md"
   ]
 }
