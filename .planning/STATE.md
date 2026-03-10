@@ -8,7 +8,7 @@ See: .planning/PROJECT.md (updated 2026-03-11)
 
 **Core value:** 让用户专注于写作本身，除在 Obsidian 写博客外无需任何手动操作
 
-**Current phase:** Phase 1 - 本地同步机制
+**Current phase:** Phase 1 - 本地同步机制 (已标记完成)
 
 ## Progress
 
