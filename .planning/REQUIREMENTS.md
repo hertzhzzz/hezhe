@@ -7,28 +7,28 @@
 
 ### 同步机制
 
-- [ ] **SYNC-01**: 配置 Obsidian Git 插件，实现文件变更自动提交和推送
-- [ ] **SYNC-02**: 创建同步脚本，检测 Obsidian 文件变化并复制到博客仓库
+- [x] **SYNC-01**: 配置 Obsidian Git 插件，实现文件变更自动提交和推送
+- [x] **SYNC-02**: 创建同步脚本，检测 Obsidian 文件变化并复制到博客仓库
 - [ ] **SYNC-03**: 配置 macOS LaunchAgent，实现后台自动运行同步脚本
-- [ ] **SYNC-04**: 同步脚本支持增量同步（只同步新增/修改的文件）
+- [x] **SYNC-04**: 同步脚本支持增量同步（只同步新增/修改的文件）
 
 ### GitHub 集成
 
-- [ ] **GITHUB-01**: 博客仓库配置 Vercel Git 部署
-- [ ] **GITHUB-02**: 同步脚本自动提交到博客仓库并推送
-- [ ] **GITHUB-03**: Vercel 检测到推送后自动部署
+- [x] **GITHUB-01**: 博客仓库配置 Vercel Git 部署
+- [x] **GITHUB-02**: 同步脚本自动提交到博客仓库并推送
+- [x] **GITHUB-03**: Vercel 检测到推送后自动部署
 
 ### 文章处理
 
-- [ ] **CONTENT-01**: 支持 Obsidian 文章 frontmatter 转换
-- [ ] **CONTENT-02**: 支持双语 frontmatter（title, titleEn, description, descriptionEn）
-- [ ] **CONTENT-03**: 支持 tags 和 categories
-- [ ] **CONTENT-04**: 自动处理文章日期（pubDate）
+- [x] **CONTENT-01**: 支持 Obsidian 文章 frontmatter 转换
+- [x] **CONTENT-02**: 支持双语 frontmatter（title, titleEn, description, descriptionEn）
+- [x] **CONTENT-03**: 支持 tags 和 categories
+- [x] **CONTENT-04**: 自动处理文章日期（pubDate）
 
 ### 用户体验
 
-- [ ] **UX-01**: 用户只需在 Obsidian 写作，无需其他操作
-- [ ] **UX-02**: 同步过程静默运行，不打扰用户
+- [x] **UX-01**: 用户只需在 Obsidian 写作，无需其他操作
+- [x] **UX-02**: 同步过程静默运行，不打扰用户
 - [ ] **UX-03**: 部署失败时有通知机制
 
 ## v2 Requirements
@@ -51,20 +51,20 @@
 
 | Requirement | Phase | Status |
 |------------|-------|--------|
-| SYNC-01 | Phase 1 | Pending |
-| SYNC-02 | Phase 1 | Pending |
-| SYNC-03 | Phase 1 | Pending |
-| SYNC-04 | Phase 1 | Pending |
-| GITHUB-01 | Phase 2 | Pending |
-| GITHUB-02 | Phase 2 | Pending |
-| GITHUB-03 | Phase 2 | Pending |
-| CONTENT-01 | Phase 1 | Pending |
-| CONTENT-02 | Phase 1 | Pending |
-| CONTENT-03 | Phase 1 | Pending |
-| CONTENT-04 | Phase 1 | Pending |
-| UX-01 | Phase 3 | Pending |
-| UX-02 | Phase 3 | Pending |
-| UX-03 | Phase 3 | Pending |
+| SYNC-01 | Phase 1 | ✓ Complete |
+| SYNC-02 | Phase 1 | ✓ Complete |
+| SYNC-03 | Phase 1 | Not Needed |
+| SYNC-04 | Phase 1 | ✓ Complete |
+| GITHUB-01 | Phase 2 | ✓ Complete |
+| GITHUB-02 | Phase 2 | ✓ Complete |
+| GITHUB-03 | Phase 2 | ✓ Complete |
+| CONTENT-01 | Phase 1 | ✓ Complete |
+| CONTENT-02 | Phase 1 | ✓ Complete |
+| CONTENT-03 | Phase 1 | ✓ Complete |
+| CONTENT-04 | Phase 1 | ✓ Complete |
+| UX-01 | Phase 3 | ✓ Complete |
+| UX-02 | Phase 3 | ✓ Complete |
+| UX-03 | Phase 3 | Not Needed |
 
 **Coverage:**
 - v1 requirements: 13 total

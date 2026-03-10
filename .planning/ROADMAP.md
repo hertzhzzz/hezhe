@@ -66,8 +66,8 @@
 
 ## Phase Summary
 
-| # | Phase | Goal | Requirements |
-|---|-------|------|--------------|
-| 1 | 本地同步机制 | Obsidian → 博客仓库 | 8 |
-| 2 | GitHub/Vercel 集成 | 自动部署 | 3 |
-| 3 | 用户体验优化 | 完善体验 | 3 |
+| # | Phase | Goal | Requirements | Status |
+|---|-------|------|--------------|--------|
+| 1 | 本地同步机制 | Obsidian → 博客仓库 | 8 | ✅ Complete |
+| 2 | GitHub/Vercel 集成 | 自动部署 | 3 | ✅ Complete |
+| 3 | 用户体验优化 | 完善体验 | 3 | ✅ Complete |
