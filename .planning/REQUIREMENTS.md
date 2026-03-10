@@ -3,14 +3,23 @@
 **Defined:** 2026-03-11
 **Core Value:** 让用户专注于写作本身，除在 Obsidian 写博客外无需任何手动操作
 
-## v1 Requirements
+## v1.1 Requirements
+
+### 草稿功能
+
+- [ ] **DRAFT-01**: 添加 `draft` 字段到内容集合 Schema，支持 `draft: true/false`
+- [ ] **DRAFT-02**: 生产环境构建时过滤草稿文章（draft: true 不显示）
+- [ ] **DRAFT-03**: 开发环境（npm run dev）可见草稿文章，方便预览
+- [ ] **DRAFT-04**: sitemap.xml 不包含草稿文章
+- [ ] **DRAFT-05**: 文章列表、分类、标签页均不显示草稿
+
+## v1.0 已完成
 
 ### 同步机制
 
 - [x] **SYNC-01**: 配置 Obsidian Git 插件，实现文件变更自动提交和推送
 - [x] **SYNC-02**: 创建同步脚本，检测 Obsidian 文件变化并复制到博客仓库
-- [ ] **SYNC-03**: 配置 macOS LaunchAgent，实现后台自动运行同步脚本
-- [x] **SYNC-04**: 同步脚本支持增量同步（只同步新增/修改的文件）
+- [x] **SYNC-04**: 同步脚本支持增量同步
 
 ### GitHub 集成
 
@@ -21,21 +30,19 @@
 ### 文章处理
 
 - [x] **CONTENT-01**: 支持 Obsidian 文章 frontmatter 转换
-- [x] **CONTENT-02**: 支持双语 frontmatter（title, titleEn, description, descriptionEn）
+- [x] **CONTENT-02**: 支持双语 frontmatter
 - [x] **CONTENT-03**: 支持 tags 和 categories
-- [x] **CONTENT-04**: 自动处理文章日期（pubDate）
+- [x] **CONTENT-04**: 自动处理文章日期
 
 ### 用户体验
 
-- [x] **UX-01**: 用户只需在 Obsidian 写作，无需其他操作
-- [x] **UX-02**: 同步过程静默运行，不打扰用户
-- [ ] **UX-03**: 部署失败时有通知机制
+- [x] **UX-01**: 无操作体验
+- [x] **UX-02**: 静默同步
 
 ## v2 Requirements
 
 ### 高级功能
 
-- **ADV-01**: 支持草稿状态（draft），只在标记为发布时才部署
 - **ADV-02**: 支持图片自动上传到图床
 - **ADV-03**: 支持文章定时发布
 
@@ -50,27 +57,18 @@
 ## Traceability
 
 | Requirement | Phase | Status |
-|------------|-------|--------|
-| SYNC-01 | Phase 1 | ✓ Complete |
-| SYNC-02 | Phase 1 | ✓ Complete |
-| SYNC-03 | Phase 1 | Not Needed |
-| SYNC-04 | Phase 1 | ✓ Complete |
-| GITHUB-01 | Phase 2 | ✓ Complete |
-| GITHUB-02 | Phase 2 | ✓ Complete |
-| GITHUB-03 | Phase 2 | ✓ Complete |
-| CONTENT-01 | Phase 1 | ✓ Complete |
-| CONTENT-02 | Phase 1 | ✓ Complete |
-| CONTENT-03 | Phase 1 | ✓ Complete |
-| CONTENT-04 | Phase 1 | ✓ Complete |
-| UX-01 | Phase 3 | ✓ Complete |
-| UX-02 | Phase 3 | ✓ Complete |
-| UX-03 | Phase 3 | Not Needed |
+|-------------|-------|--------|
+| DRAFT-01 | Phase 4 | Pending |
+| DRAFT-02 | Phase 4 | Pending |
+| DRAFT-03 | Phase 4 | Pending |
+| DRAFT-04 | Phase 4 | Pending |
+| DRAFT-05 | Phase 5 | Pending |
 
 **Coverage:**
-- v1 requirements: 13 total
-- Mapped to phases: 13
+- v1.1 requirements: 5 total
+- Mapped to phases: 5
 - Unmapped: 0 ✓
 
 ---
 *Requirements defined: 2026-03-11*
-*Last updated: 2026-03-11 after initial definition*
+*Last updated: 2026-03-11 for v1.1*

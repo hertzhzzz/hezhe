@@ -1,73 +1,87 @@
 # Roadmap: Obsidian 自动化博客发布工作流
 
 **Created:** 2026-03-11
-**Phases:** 3
-**Requirements:** 13
-
-## Phase 1: 本地同步机制
-
-**Goal:** 建立 Obsidian 到博客仓库的本地同步管道
-
-### Requirements Covered
-
-- SYNC-01: 配置 Obsidian Git 插件
-- SYNC-02: 创建同步脚本
-- SYNC-03: 配置 LaunchAgent
-- SYNC-04: 增量同步支持
-- CONTENT-01: frontmatter 转换
-- CONTENT-02: 双语支持
-- CONTENT-03: tags/categories 支持
-- CONTENT-04: 日期处理
-
-### Success Criteria
-
-1. Obsidian 文件保存后 30 秒内同步到博客仓库
-2. frontmatter 正确转换
-3. 同步脚本后台静默运行
-4. 日志记录同步状态
+**Milestone:** v1.1 Draft Support
+**Phases:** 2
+**Requirements:** 5
 
 ---
 
-## Phase 2: GitHub 与 Vercel 集成
+## Phases
 
-**Goal:** 实现自动部署
-
-### Requirements Covered
-
-- GITHUB-01: Vercel Git 部署配置
-- GITHUB-02: 自动提交推送
-- GITHUB-03: Vercel 自动部署
-
-### Success Criteria
-
-1. 博客仓库推送后 Vercel 自动部署
-2. 部署时间 < 3 分钟
-3. 部署状态可查看
+- [ ] **Phase 4: Foundation** - Schema, helper function, core pages
+- [ ] **Phase 5: List Pages** - All list pages with draft filtering
 
 ---
 
-## Phase 3: 用户体验优化
+## Phase Details
 
-**Goal:** 完善用户体验
+### Phase 4: Foundation
+**Goal**: Users can define draft status in frontmatter, with filtering working in core pages
 
-### Requirements Covered
+**Depends on**: Nothing (first phase of v1.1)
 
-- UX-01: 无操作体验
-- UX-02: 静默同步
-- UX-03: 错误通知
+**Requirements**: DRAFT-01, DRAFT-02, DRAFT-03, DRAFT-04
 
-### Success Criteria
+**Success Criteria** (what must be TRUE):
+1. User can add `draft: true` or `draft: false` to Obsidian frontmatter, and it persists through sync
+2. Production build (`npm run build`) excludes all draft articles from generated HTML
+3. Development server (`npm run dev`) includes draft articles for preview
+4. Sitemap.xml does not contain draft article URLs
 
-1. 用户测试无感知发布流程
-2. 失败时能收到通知
-3. 文档完整可追溯
+**Plans**: TBD
 
 ---
 
-## Phase Summary
+### Phase 5: List Pages
+**Goal**: All list/collection pages exclude draft articles
+
+**Depends on**: Phase 4
+
+**Requirements**: DRAFT-05
+
+**Success Criteria** (what must be TRUE):
+1. Homepage (index.astro) does not display draft articles in featured/latest sections
+2. Articles archive page excludes draft articles
+3. Category pages (categories/[category].astro) exclude draft articles
+4. Tag pages (tags/[tag].astro) exclude draft articles
+
+**Plans**: TBD
+
+---
+
+## Progress
+
+| Phase | Plans Complete | Status | Completed |
+|-------|----------------|--------|-----------|
+| 4. Foundation | 0/1 | Not started | - |
+| 5. List Pages | 0/1 | Not started | - |
+
+---
+
+## Coverage Map
+
+| Requirement | Phase | Status |
+|-------------|-------|--------|
+| DRAFT-01 (draft field in schema) | Phase 4 | Pending |
+| DRAFT-02 (prod filter) | Phase 4 | Pending |
+| DRAFT-03 (dev visible) | Phase 4 | Pending |
+| DRAFT-04 (sitemap exclude) | Phase 4 | Pending |
+| DRAFT-05 (lists exclude) | Phase 5 | Pending |
+
+**Coverage:** 5/5 requirements mapped ✓
+
+---
+
+## v1.0 Summary (Completed)
 
 | # | Phase | Goal | Requirements | Status |
 |---|-------|------|--------------|--------|
 | 1 | 本地同步机制 | Obsidian → 博客仓库 | 8 | ✅ Complete |
 | 2 | GitHub/Vercel 集成 | 自动部署 | 3 | ✅ Complete |
 | 3 | 用户体验优化 | 完善体验 | 3 | ✅ Complete |
+
+---
+
+*Roadmap created: 2026-03-11*
+*For milestone: v1.1*

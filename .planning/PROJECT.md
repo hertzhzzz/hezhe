@@ -8,20 +8,29 @@
 
 让用户专注于写作本身，除在 Obsidian 写博客外无需任何手动操作。
 
-## Requirements
+## Current Milestone: v1.1 Draft Support
+
+**Goal:** 实现草稿状态支持，允许用户在 Obsidian 写草稿而不发布
+
+**Target features:**
+- 支持 `draft` frontmatter 字段
+- 草稿文章只同步不部署
+- 只有正式文章才发布到网站
 
 ### Validated
 
-(None yet — ship to validate)
+- ✓ **OBS-01**: 用户在 Obsidian 写完文章后，自动同步到博客仓库 — v1.0
+- ✓ **OBS-02**: 支持双语文章（中英文 frontmatter）— v1.0
+- ✓ **OBS-03**: Vercel 自动检测到更新并部署 — v1.0
+- ✓ **OBS-04**: 用户无需任何手动 Git 操作 — v1.0
+- ✓ **OBS-05**: 支持文章分类和标签 — v1.0
+- ✓ **OBS-06**: 发布流程可靠，有错误反馈 — v1.0
 
 ### Active
 
-- [ ] **OBS-01**: 用户在 Obsidian 写完文章后，自动同步到博客仓库
-- [ ] **OBS-02**: 支持双语文章（中英文 frontmatter）
-- [ ] **OBS-03**: Vercel 自动检测到更新并部署
-- [ ] **OBS-04**: 用户无需任何手动 Git 操作
-- [ ] **OBS-05**: 支持文章分类和标签
-- [ ] **OBS-06**: 发布流程可靠，有错误反馈
+- [ ] **DRAFT-01**: 支持 `draft` frontmatter 字段
+- [ ] **DRAFT-02**: 草稿文章（draft: true）不同步到部署目录
+- [ ] **DRAFT-03**: 只有非草稿文章才发布到网站
 
 ### Out of Scope
 
