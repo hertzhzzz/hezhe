@@ -1,10 +1,10 @@
 ---
 import MainLayout from '../layouts/MainLayout.astro';
-import { getCollection } from 'astro:content';
+import { getPublishedPosts } from '../utils/posts';
 import profile from '../data/profile.json';
 
-// 获取所有文章
-const allPosts = await getCollection('posts');
+// 获取已发布文章
+const allPosts = await getPublishedPosts();
 
 // Featured: 获取 featured: true 的文章，最多 4 篇
 const featuredPosts = allPosts
