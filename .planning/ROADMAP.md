@@ -10,7 +10,7 @@
 ## Phases
 
 - [x] **Phase 4: Foundation** - Schema, helper function, core pages (completed 2026-03-11)
-- [ ] **Phase 5: List Pages** - All list pages with draft filtering
+- [x] **Phase 5: List Pages** - All list pages with draft filtering (completed 2026-03-11)
 
 ---
 
@@ -58,7 +58,7 @@ Plans:
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
 | 4. Foundation | 1/1 | Complete    | 2026-03-11 |
-| 5. List Pages | 0/1 | Not started | - |
+| 5. List Pages | 1/1 | Complete    | 2026-03-11 |
 
 ---
 
