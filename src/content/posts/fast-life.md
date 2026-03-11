@@ -11,6 +11,7 @@ tags:
 categories:
   - 生活
 featured: true
+draft: "true"
 ---
 
 # 快节奏的生活方式
