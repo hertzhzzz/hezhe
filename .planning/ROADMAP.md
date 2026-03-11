@@ -9,7 +9,7 @@
 
 ## Phases
 
-- [ ] **Phase 4: Foundation** - Schema, helper function, core pages
+- [x] **Phase 4: Foundation** - Schema, helper function, core pages (completed 2026-03-11)
 - [ ] **Phase 5: List Pages** - All list pages with draft filtering
 
 ---
@@ -29,7 +29,7 @@
 3. Development server (`npm run dev`) includes draft articles for preview
 4. Sitemap.xml does not contain draft article URLs
 
-**Plans:** 1 plan
+**Plans:** 1/1 plans complete
 
 Plans:
 - [ ] 04-01-PLAN.md — Schema + helper + core pages (posts/[slug], sitemap)
@@ -57,7 +57,7 @@ Plans:
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 4. Foundation | 1/1 | Complete | 2026-03-11 |
+| 4. Foundation | 1/1 | Complete    | 2026-03-11 |
 | 5. List Pages | 0/1 | Not started | - |
 
 ---
