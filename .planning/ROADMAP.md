@@ -57,7 +57,7 @@ Plans:
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 4. Foundation | 0/1 | Not started | - |
+| 4. Foundation | 1/1 | Complete | 2026-03-11 |
 | 5. List Pages | 0/1 | Not started | - |
 
 ---
@@ -66,10 +66,10 @@ Plans:
 
 | Requirement | Phase | Status |
 |-------------|-------|--------|
-| DRAFT-01 (draft field in schema) | Phase 4 | Pending |
-| DRAFT-02 (prod filter) | Phase 4 | Pending |
-| DRAFT-03 (dev visible) | Phase 4 | Pending |
-| DRAFT-04 (sitemap exclude) | Phase 4 | Pending |
+| DRAFT-01 (draft field in schema) | Phase 4 | Complete |
+| DRAFT-02 (prod filter) | Phase 4 | Complete |
+| DRAFT-03 (dev visible) | Phase 4 | Complete |
+| DRAFT-04 (sitemap exclude) | Phase 4 | Complete |
 | DRAFT-05 (lists exclude) | Phase 5 | Pending |
 
 **Coverage:** 5/5 requirements mapped ✓

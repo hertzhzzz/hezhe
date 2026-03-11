@@ -3,13 +3,15 @@ gsd_state_version: 1.0
 milestone: v1.1
 milestone_name: draft-support
 current_phase: Phase 4 (Foundation)
-status: planning
-last_updated: "2026-03-11T12:00:00.000Z"
+current_plan: "01"
+total_plans_in_phase: 1
+status: in_progress
+last_updated: "2026-03-11T02:38:00.000Z"
 progress:
   total_phases: 2
   completed_phases: 0
-  total_plans: 0
-  completed_plans: 0
+  total_plans: 2
+  completed_plans: 1
 ---
 
 # State: Obsidian 自动化博客发布工作流
@@ -33,9 +35,9 @@ See: .planning/PROJECT.md (updated 2026-03-11)
 ## v1.1 进行中
 
 **Phase 4: Foundation**
-- Schema 添加 draft 字段
-- 创建辅助函数过滤草稿
-- posts/[slug].astro 和 sitemap.xml.ts 过滤草稿
+- [x] Schema 添加 draft 字段
+- [x] 创建辅助函数过滤草稿
+- [x] posts/[slug].astro 和 sitemap.xml.ts 过滤草稿
 
 **Phase 5: List Pages**
 - index.astro, articles.astro 过滤草稿
