@@ -29,7 +29,10 @@
 3. Development server (`npm run dev`) includes draft articles for preview
 4. Sitemap.xml does not contain draft article URLs
 
-**Plans**: TBD
+**Plans:** 1 plan
+
+Plans:
+- [ ] 04-01-PLAN.md — Schema + helper + core pages (posts/[slug], sitemap)
 
 ---
 
@@ -46,7 +49,7 @@
 3. Category pages (categories/[category].astro) exclude draft articles
 4. Tag pages (tags/[tag].astro) exclude draft articles
 
-**Plans**: TBD
+**Plans:** TBD
 
 ---
 
