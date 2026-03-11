@@ -9,7 +9,11 @@ export async function getPublishedPosts() {
   const posts = await getCollection('posts');
 
   if (import.meta.env.PROD) {
-    return posts.filter((post) => post.data.draft !== true);
+    return posts.filter((post) => {
+      const draft = post.data.draft;
+      // Handle both boolean true and string "true"
+      return draft !== true && draft !== 'true';
+    });
   }
 
   return posts;
