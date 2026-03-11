@@ -1,7 +1,8 @@
 import { getCollection } from 'astro:content';
+import { getPublishedPosts } from '../utils/posts';
 
 export async function GET() {
-  const posts = await getCollection('posts');
+  const posts = await getPublishedPosts();
   const site = 'https://markhzz.com';
 
   const staticPages = [
